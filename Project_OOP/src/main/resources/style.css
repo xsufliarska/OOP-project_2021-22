@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('HARRYP__.TTF');
+}
+.button
+{
+    /*-fx-background-color: #ffca38;*/
+    /*-fx-background-color: #fccf35;*/
+    -fx-background-color: #823333;
+    -fx-font-family: 'Harry Potter';
+    -fx-font-size: 12.0;
+    textFill: "WHITE";
+}
+.button:hover
+{
+    /*-fx-background-color: #fdda7f;*/
+    /*-fx-background-color: #7f0909;*/
+    -fx-background-color: #fccf35;
+    textFill: "WHITE";
+}
+.HBox-button
+{
+    -fx-background-color: #fccf35;
+    textFill: "WHITE";
+}
+.HBox-button:hover
+{
+    -fx-background-color: #fdda7f;
+}
+
+
+.text
+{
+    /*fill: "WHITE";*/
+    textAlignment: "CENTER";
+    -fx-font: "Times New Roman";
+    /*-fx-text-fill: "RED";*/
+    -fx-text-fill: #fccf35;
+}
+.borderpane
+{
+    /*-fx-background-color: #ffc500;*/
+    -fx-background-color: #7f0909;
+}
+/* just for home page ancherpane */
+.anchorpane
+{
+    /*-fx-background-color: #ffdb78;*/
+    -fx-background-color: #823333;
+}
