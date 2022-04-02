@@ -1,30 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" styleClass="borderpane" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerAddItem">
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" styleClass="borderpane" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeP.ControllerAddItem">
    <center>
-      <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="124.0" layoutY="64.0" prefHeight="318.0" prefWidth="242.0">
+               <children>
+                  <TextField editable="false" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" text="Name:">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" text="Category:" />
+                  <TextField editable="false" prefHeight="55.0" prefWidth="296.0" styleClass="textFieldAuto" text="Description:" />
+                  <TextField editable="false" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" text="Starting price:" />
+                  <TextField editable="false" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" text="Value:" />
+               </children>
+            </VBox>
+            <VBox layoutX="364.0" layoutY="110.0" prefHeight="200.0" prefWidth="100.0" />
+            <VBox layoutX="333.0" layoutY="64.0" prefHeight="318.0" prefWidth="242.0">
+               <children>
+                  <TextField fx:id="name" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="category" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" />
+                  <TextField fx:id="description" prefHeight="55.0" prefWidth="296.0" styleClass="textFieldAuto" />
+                  <TextField fx:id="startingPrice" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" />
+                  <TextField fx:id="value" prefHeight="38.0" prefWidth="100.0" styleClass="textFieldAuto" />
+               </children>
+            </VBox>
+            <Button fx:id="addItemConfirmButton" layoutX="282.0" layoutY="382.0" mnemonicParsing="false" onAction="#addItemsConfirmClicked" prefHeight="46.0" prefWidth="134.0" styleClass="HBox-button" text="Add Item" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
    </center>
    <top>
       <AnchorPane prefHeight="145.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
-            <Circle fill="WHITE" layoutX="68.0" layoutY="69.0" radius="42.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <HBox fx:id="buttonBar" alignment="CENTER" layoutY="119.0" prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #ffca38;">
                <children>
-                  <Button fx:id="addItemButton1" mnemonicParsing="false" onAction="#addItemsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Menu" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -57,21 +86,29 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <ImageView fx:id="settingsIcon" fitHeight="33.0" fitWidth="34.0" layoutX="607.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/gearwheelIcon.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="logoutIcon" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="71.0" onDragDetected="#logoutIconClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/logoutIcon.png" />
-               </image>
-            </ImageView>
             <Text fill="WHITE" layoutX="94.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD ITEM" textAlignment="CENTER" wrappingWidth="512.5367584228516">
                <font>
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
+            <Button layoutX="590.0" layoutY="66.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/gearwheelIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/logoutIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </top>

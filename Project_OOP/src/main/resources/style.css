@@ -2,20 +2,17 @@
     font-family: 'Harry Potter';
     src: url('HARRYP__.TTF');
 }
+
 .button
 {
-    /*-fx-background-color: #ffca38;*/
-    /*-fx-background-color: #fccf35;*/
-    -fx-background-color: #823333;
+    -fx-background-color: #823333;          /* #ffca38, #fccf35 */
     -fx-font-family: 'Harry Potter';
     -fx-font-size: 12.0;
     textFill: "WHITE";
 }
 .button:hover
 {
-    /*-fx-background-color: #fdda7f;*/
-    /*-fx-background-color: #7f0909;*/
-    -fx-background-color: #fccf35;
+    -fx-background-color: #fccf35;          /* #fdda7f, #7f0909 */
     textFill: "WHITE";
 }
 .HBox-button
@@ -28,23 +25,43 @@
     -fx-background-color: #fdda7f;
 }
 
-
-.text
+.logOutButton
 {
-    /*fill: "WHITE";*/
-    textAlignment: "CENTER";
-    -fx-font: "Times New Roman";
-    /*-fx-text-fill: "RED";*/
-    -fx-text-fill: #fccf35;
+    -fx-background-color: none;
+    -fx-background-image: url('/pictures/logoutIcon.png');
+    -fx-background-size: 100% 100%;
 }
+.settingsButton
+{
+    -fx-background-color: none;
+    -fx-background-image: url('/pictures/gearwheelIcon.png');
+    -fx-background-size: 100% 100%;
+}
+
+
 .borderpane
 {
-    /*-fx-background-color: #ffc500;*/
-    -fx-background-color: #7f0909;
+    -fx-background-color: #7f0909;          /* #ffc500 */
 }
+
 /* just for home page ancherpane */
 .anchorpane
 {
-    /*-fx-background-color: #ffdb78;*/
-    -fx-background-color: #823333;
+    -fx-background-color: #823333;          /* #ffdb78 */
+}
+
+
+.text
+{
+    textAlignment: "CENTER";
+    -fx-font: "Times New Roman";
+    -fx-text-fill: #fccf35;
+}
+.textFieldAuto
+{
+    -fx-background-color: none;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+    -fx-font-size: 30 pt;
+    -fx-font-family: "Times New Roman";
 }

@@ -1,13 +1,13 @@
 package controllers;
 
-        import javafx.event.ActionEvent;
-        import javafx.fxml.FXML;
-        import javafx.fxml.FXMLLoader;
-        import javafx.scene.control.*;
-        import javafx.scene.layout.*;
-        import main.Entry;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import main.Authentication;
 
-        import java.io.IOException;
+import java.io.IOException;
 
 public class ControllerRegister {
 
@@ -57,7 +57,7 @@ public class ControllerRegister {
             info.setText("You entered wrong password. Please try again");
         }
         else if(registerPassword2.equals(registerPassword1) && registerUsername != null && registerPassword1 != null) {
-            Entry user = new Entry();
+            Authentication user = new Authentication();
             user.register(registerUsername, registerName, registerPassword1);
 
 
@@ -76,5 +76,4 @@ public class ControllerRegister {
             rootPane.getChildren().setAll(pane);
         }
     }
-
 }

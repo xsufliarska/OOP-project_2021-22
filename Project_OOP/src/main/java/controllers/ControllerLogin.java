@@ -1,13 +1,13 @@
 package controllers;
 
-        import javafx.event.ActionEvent;
-        import javafx.fxml.FXML;
-        import javafx.fxml.FXMLLoader;
-        import javafx.scene.control.*;
-        import javafx.scene.layout.*;
-        import main.Entry;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import main.Authentication;
 
-        import java.io.IOException;
+import java.io.IOException;
 
 public class ControllerLogin {
 
@@ -45,7 +45,7 @@ public class ControllerLogin {
             info.setText("Please enter username and password");
         }
         else if(loginUsername != null && loginPassword != null) {
-            Entry user = new Entry();
+            Authentication user = new Authentication();
             rightUser = user.checkIfCorrect(loginUsername, loginPassword);
 
             if(rightUser == false) {
@@ -66,5 +66,4 @@ public class ControllerLogin {
             }
         }
     }
-
 }

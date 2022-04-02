@@ -1,19 +1,19 @@
 package controllers;
 
-import controllers.homeP.ControllerHomePageTopBar;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ControllerHomePage extends ControllerHomePageTopBar {
+public class ControllerHomePage extends ControllerHomePageTopBar implements Initializable {
 
     @FXML
     private Button addItemButton;
@@ -22,70 +22,52 @@ public class ControllerHomePage extends ControllerHomePageTopBar {
     @FXML
     private HBox buttonBar;
     @FXML
-    private ImageView logoutIcon;
-    @FXML
-    private Button menuButton;
+    private Button logoutButton;
     @FXML
     private Button profileButton;
     @FXML
     private BorderPane rootPane;
     @FXML
-    private ImageView settingsIcon;
+    private Button settingsIcon;
     @FXML
     private Button statsButton;
     @FXML
     private Button walletButton;
 
 
-    @FXML
-    void addItemsClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/addItem.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
 
-    @FXML
-    void auctionsClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auctions.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    @FXML
-    void logoutIconClicked(MouseEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
-        rootPane.getChildren().setAll(pane);
-
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Successful Log out");
-        alert.setHeaderText("Mischief managed.");
-        alert.setContentText("Log out was successful, see you later");
-        alert.showAndWait().ifPresent(rs -> {
-            if (rs == ButtonType.OK) {}
-        });
-    }
-
-    @FXML
-    void menuClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    @FXML
-    void profileClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/profile.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    @FXML
-    void statsClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/stats.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-    @FXML
-    void walletClicked(ActionEvent event) throws IOException {
-        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/wallet.fxml"));
-        rootPane.getChildren().setAll(pane);
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            addItemsClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            auctionsClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            logoutClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            profileClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            statsClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            walletClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

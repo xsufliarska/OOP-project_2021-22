@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -15,35 +14,39 @@
    <center>
       <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" layoutX="367.0" layoutY="220.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="107.0" styleClass="HBox-button" text="Cash out" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="cashOutButton" alignment="CENTER" layoutX="368.0" layoutY="262.0" mnemonicParsing="false" onAction="#cashOut" prefHeight="38.0" prefWidth="107.0" styleClass="HBox-button" text="Cash out" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Text fill="WHITE" layoutX="224.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" textAlignment="CENTER" wrappingWidth="250.0">
+            <Text fill="WHITE" layoutX="225.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" textAlignment="CENTER" wrappingWidth="250.0">
                <font>
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <TextField alignment="CENTER" layoutX="225.0" layoutY="170.0" prefHeight="30.0" prefWidth="250.0" promptText="Amount" />
-            <Button alignment="CENTER" layoutX="225.0" layoutY="220.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="107.0" styleClass="HBox-button" text="Add cash" textAlignment="CENTER" textFill="WHITE">
+            <TextField fx:id="amountField" alignment="CENTER" layoutX="226.0" layoutY="212.0" prefHeight="30.0" prefWidth="250.0" promptText="Amount" />
+            <Button fx:id="addCashButton" alignment="CENTER" layoutX="226.0" layoutY="262.0" mnemonicParsing="false" onAction="#addCash" prefHeight="38.0" prefWidth="107.0" styleClass="HBox-button" text="Add cash" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Text fill="WHITE" layoutX="292.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" wrappingWidth="114.0">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="balance" alignment="CENTER" editable="false" layoutX="154.0" layoutY="61.0" prefHeight="55.0" prefWidth="391.0" style="-fx-background-color: none; -fx-border-color: none; -fx-text-fill: white;">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </TextField>
          </children></AnchorPane>
    </center>
    <top>
       <AnchorPane prefHeight="145.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
-            <Circle fill="WHITE" layoutX="68.0" layoutY="69.0" radius="42.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <HBox fx:id="buttonBar" alignment="CENTER" layoutY="119.0" prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #ffca38;">
                <children>
-                  <Button fx:id="addItemButton1" mnemonicParsing="false" onAction="#addItemsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Menu" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -76,21 +79,29 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <ImageView fx:id="settingsIcon" fitHeight="33.0" fitWidth="34.0" layoutX="607.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/gearwheelIcon.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="logoutIcon" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="71.0" onDragDetected="#logoutIconClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/logoutIcon.png" />
-               </image>
-            </ImageView>
             <Text fill="WHITE" layoutX="94.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WALLET" textAlignment="CENTER" wrappingWidth="512.5367584228516">
                <font>
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
+            <Button layoutX="590.0" layoutY="66.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/gearwheelIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/logoutIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </top>

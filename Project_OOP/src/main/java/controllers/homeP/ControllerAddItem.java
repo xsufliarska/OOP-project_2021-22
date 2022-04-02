@@ -13,8 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerAuctions extends ControllerHomePageTopBar implements Initializable {
-
+public class ControllerAddItem extends ControllerHomePageTopBar implements Initializable {
     @FXML
     private Button addItemButton;
     @FXML
@@ -33,23 +32,6 @@ public class ControllerAuctions extends ControllerHomePageTopBar implements Init
     private Button statsButton;
     @FXML
     private Button walletButton;
-
-
-    @FXML
-    private Button chamberButton;
-    @FXML
-    private Button itemButton;
-
-
-    @FXML
-    void itemClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void chamberClicked(ActionEvent event) {
-
-    }
 
 
 
@@ -86,5 +68,4 @@ public class ControllerAuctions extends ControllerHomePageTopBar implements Init
             e.printStackTrace();
         }
     }
-
 }

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -14,39 +15,51 @@
    <center>
       <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of attented auctions:" wrappingWidth="376.53672647476196">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of successful auctions:" wrappingWidth="401.3367142677307">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of bought chambers:" wrappingWidth="401.3367142677307">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="14.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total income:" wrappingWidth="401.3367142677307">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
+            <VBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="123.0" prefHeight="200.0" prefWidth="100.0" spacing="21.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of attented auctions:" wrappingWidth="376.53672647476196">
+                     <font>
+                        <Font name="Times New Roman" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of auctions won:" wrappingWidth="401.3367142677307">
+                     <font>
+                        <Font name="Times New Roman" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of bought chambers:" wrappingWidth="401.3367142677307">
+                     <font>
+                        <Font name="Times New Roman" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="390.0" layoutY="123.0" prefHeight="200.0" prefWidth="206.0">
+               <children>
+                  <TextField fx:id="auctionsAttended" editable="false" prefHeight="55.0" prefWidth="391.0" style="-fx-background-color: none; -fx-border-color: none; -fx-text-fill: white;">
+                     <font>
+                        <Font name="Times New Roman" size="25.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="auctionsWon" editable="false" prefHeight="55.0" prefWidth="391.0" style="-fx-background-color: none; -fx-border-color: none; -fx-text-fill: white;">
+                     <font>
+                        <Font name="Times New Roman" size="25.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="chambersBought" editable="false" prefHeight="55.0" prefWidth="391.0" style="-fx-background-color: none; -fx-border-color: none; -fx-text-fill: white;">
+                     <font>
+                        <Font name="Times New Roman" size="25.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
          </children></AnchorPane>
    </center>
    <top>
       <AnchorPane prefHeight="145.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
-            <Circle fill="WHITE" layoutX="68.0" layoutY="69.0" radius="42.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <HBox fx:id="buttonBar" alignment="CENTER" layoutY="119.0" prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #ffca38;">
                <children>
-                  <Button fx:id="addItemButton1" mnemonicParsing="false" onAction="#addItemsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Menu" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -79,21 +92,29 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <ImageView fx:id="settingsIcon" fitHeight="33.0" fitWidth="34.0" layoutX="607.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/gearwheelIcon.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="logoutIcon" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="71.0" onDragDetected="#logoutIconClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../pictures/logoutIcon.png" />
-               </image>
-            </ImageView>
             <Text fill="WHITE" layoutX="94.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATS" textAlignment="CENTER" wrappingWidth="512.5367584228516">
                <font>
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
+            <Button layoutX="590.0" layoutY="68.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/gearwheelIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../../style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../pictures/logoutIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </top>

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -14,57 +13,23 @@
    <center>
       <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="72.0" layoutY="109.0" prefHeight="100.0" prefWidth="555.0" spacing="30.0">
-               <children>
-                  <Button fx:id="menuButton1" mnemonicParsing="false" onAction="#menuClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Menu" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="profileButton1" mnemonicParsing="false" onAction="#profileClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="walletButton1" mnemonicParsing="false" onAction="#walletClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Wallet" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox layoutX="70.0" layoutY="237.0" prefHeight="100.0" prefWidth="559.0" spacing="30.0">
-               <children>
-                  <Button fx:id="statsButton1" mnemonicParsing="false" onAction="#statsClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Stats" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="auctionsButton1" mnemonicParsing="false" onAction="#auctionsClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Auctions" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="addItemButton1" mnemonicParsing="false" onAction="#addItemsClicked" prefHeight="100.0" prefWidth="200.0" styleClass="HBox-button" text="Add Item" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
+            <Text fill="WHITE" layoutX="67.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BID CHAMBER" textAlignment="CENTER" wrappingWidth="566.1367664337158">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="67.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" textAlignment="CENTER" wrappingWidth="566.1367664337158">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
    </center>
    <top>
       <AnchorPane prefHeight="145.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
-            <Circle fill="WHITE" layoutX="68.0" layoutY="69.0" radius="42.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <HBox fx:id="buttonBar" alignment="CENTER" layoutY="119.0" prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #ffca38;">
                <children>
-                  <Button fx:id="menuButton" mnemonicParsing="false" onAction="#menuClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Menu" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -92,26 +57,29 @@
                   </Button>
                </children>
             </HBox>
-            <Text fill="WHITE" layoutX="94.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BID CHAMBER" textAlignment="CENTER" wrappingWidth="512.5367584228516">
+            <Text fill="WHITE" layoutX="94.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BID CHAMBER" textAlignment="CENTER" wrappingWidth="512.5367584228516">
                <font>
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <ImageView fx:id="settingsIcon" fitHeight="33.0" fitWidth="34.0" layoutX="607.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pictures/gearwheelIcon.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="logoutIcon" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="71.0" onDragDetected="#logoutIconClicked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pictures/logoutIcon.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="94.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER" wrappingWidth="512.5367584228516">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
+            <Button layoutX="590.0" layoutY="66.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../style.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/gearwheelIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/logoutIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </top>

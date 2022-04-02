@@ -1,0 +1,45 @@
+Main - odkomentovat
+ControllerWallet - odkomentovat veci ked bude hotovy user singleton (a serializacia)
+ControllerRegister - odkomentovat a dorobit register, pridat do linked listu, ...
+ControllerStats - odkomentovat v initialize
+
+
+Authentication
+pozriet style.css a buttony - asi upravit a premenovat kategorie zas
+
+
+
+FOR SURE NOT DONE
+ControllerAddItem
+ControllerAuctions
+SingletonUser
+txtSerializable
+Storage
+
+FOR SURE NOT DONE FXML
+addItem
+chamberAuction
+itemAuction
+
+
+
+
+
+
+DONE
+Controller
+ControllerHomePage
+ControllerHomePageTopBar
+ControllerLogin                     -> Authentication (not done)
+               ControllerRegister (not sure if done)
+
+DONE FXML
+main
+login
+register
+homePage
+
+wallet
+auctions                            -> probably done
+stats
+profile

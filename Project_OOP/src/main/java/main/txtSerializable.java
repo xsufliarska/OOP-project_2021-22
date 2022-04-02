@@ -1,20 +1,24 @@
 package main;
 
+import main.model.User;
+
 import java.io.*;
+import java.io.Serializable;
+import java.util.LinkedList;
 
 public class txtSerializable {
 
-    public void deserialization() throws IOException {
+    public void deserialization(LinkedList <User> userList) throws IOException, ClassNotFoundException {
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("/main/registeredUsers.out"));
-        //List<User/*typ veci v linked liste*/> users = (List<User/*typ veci v linked liste*/>) inputStream.readObject/*trieda na vytvorenie objektu asi*/();
+        userList = (LinkedList<User>) inputStream.readObject();
         inputStream.close();
     }
 
-    public void serialization() throws IOException {
+    public void serialization(User user) throws IOException {
         FileOutputStream fileOut = new FileOutputStream("/main/registeredUsers.out");
         ObjectOutputStream outputStream = new ObjectOutputStream(fileOut);
 
-        //outputStream.writeObject(/* koho tam chcem supnut - asi toho noveho usera */);
+        outputStream.writeObject(user); /* v () - koho tam chcem supnut - asi toho noveho usera */
         outputStream.close();
     }
 
