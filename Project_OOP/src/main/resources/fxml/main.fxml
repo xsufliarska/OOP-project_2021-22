@@ -21,12 +21,12 @@
                   <Font name="Harry P" size="65.0" />
                </font>
             </Text>
-            <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginScreen" prefHeight="43.0" prefWidth="280.0" text="Login" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginScreen" prefHeight="43.0" prefWidth="280.0" styleClass="main-button" text="Login" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registerScreen" prefHeight="43.0" prefWidth="280.0" text="Register" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registerScreen" prefHeight="43.0" prefWidth="280.0" styleClass="main-button" text="Register" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

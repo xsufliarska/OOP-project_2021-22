@@ -5,14 +5,12 @@ import controllers.ControllerHomePageTopBar;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import main.model.SingletonUser;
 
 public class ControllerProfile extends ControllerHomePageTopBar implements Initializable {
 
@@ -41,13 +39,6 @@ public class ControllerProfile extends ControllerHomePageTopBar implements Initi
     private TextField name;
     @FXML
     private TextField username;
-
-
-    /*
-    name.setText(user.name);
-    username.setText(user.username);
-    balance.setText(user.wallet.balance "€");
-    */
 
 
 
@@ -83,5 +74,10 @@ public class ControllerProfile extends ControllerHomePageTopBar implements Initi
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        name.setText(SingletonUser.getInstance().getUser().getName());
+        username.setText(SingletonUser.getInstance().getUser().getUsername());
+        balance.setText(SingletonUser.getInstance().getUser().wallet.balance + "€");
     }
 }

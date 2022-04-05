@@ -10,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import main.model.SingletonUser;
+import main.model.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -46,7 +48,7 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
     @FXML
     private Button cashOutButton;
 
-
+    User user = SingletonUser.getInstance().getUser();
     int amount = 0;
 
     @FXML
@@ -55,9 +57,9 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
             amount = Integer.parseInt(amountField.getText());
         }
 
-        //user.wallet.charge(amount);
+        user.wallet.charge(amount);
 
-        //balance.setText(user.wallet.balance + " €");
+        balance.setText(user.wallet.balance + " €");
         amountField.clear();                                // not necessary
     }
 
@@ -67,9 +69,9 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
             amount = Integer.parseInt(amountField.getText());
         }
 
-        //user.wallet.withdraw(amount);
+        user.wallet.withdraw(amount);
 
-        //balance.setText(user.wallet.balance + " €");
+        balance.setText(user.wallet.balance + " €");
         amountField.clear();                                // not necessary
     }
 
@@ -108,7 +110,7 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
 
 
 
-        balance.setText("user.wallet.balance" + " €");
+        balance.setText(user.wallet.balance + " €");
 
         amountField.textProperty().addListener(new ChangeListener<String>() {
             @Override

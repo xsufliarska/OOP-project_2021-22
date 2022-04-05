@@ -1,63 +1,68 @@
 package main;
 
+import main.model.SingletonUser;
 import main.model.User;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Authentication {
 
-    //User user = new User();
-
-    // nacita file
-   /* File file = new File("/main/registeredUsers.txt");
-    FileReader fr;
+    // load file
+    File file = new File("registeredUsers.txt");
+    Scanner fr;
+    LinkedList<User> users;
 
     // constructor
     public Authentication() {
         try {
-            fr = new FileReader(file);
-        } catch (FileNotFoundException e) {
+            users = new TxtSerializable().deserialization();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
 //------------------------------------------------------ L O G I N ------------------------------------------------------
 
     public boolean checkIfCorrect(String loginName, String loginPassword) {
-        User loadedUser = null;
-
-        // skontroluje dokument ci sedi
-        int numOfRegisteredUsers = 0;
-
-
-
-        for(int i = 0; i < numOfRegisteredUsers; i++) {
-
-
-            //user = this loged in person "upsidedown emoji"
-            //user = loadedUser;
-            return true;
+        for (User atIndex: users) {
+            if(atIndex.getUsername().equals(loginName) && atIndex.getPassword().equals(loginPassword)) {
+                SingletonUser.getInstance().setUser(atIndex);
+                return true;
+            }
         }
-
-        return true;                                                  // FOR CHECK CHANGE IT TO TRUE AND THE SCENE WILL CHANGE
+        return false;                                                  // FOR CHECK CHANGE IT TO TRUE AND THE SCENE WILL CHANGE
     }
 
 //--------------------------------------------------- R E G I S T E R ---------------------------------------------------
 
-    public void register(String registerUsername, String registerName, String registerPassword1) {
+    public boolean register(String registerUsername, String registerName, String registerPassword) throws IOException {
+
+        boolean isRegistered = false;
 
         // probably need to chcek if username is free :rollingeyes:
-        User newUser = null;
+        for(User atIndex: users) {
+            if(atIndex.getUsername().equals(registerUsername)) {
+                isRegistered = true;
+            }
+        }
 
-        newUser.setName(registerName);
-        newUser.setPassword(registerPassword1);
-        newUser.setUsername(registerUsername);
+        // if user is not registered, register him
+        if(isRegistered == false) {
+            User newUser = new User(registerUsername, registerPassword, registerName, "0", "0", "0", "0");
 
-        //userList.add(newUser);
+            newUser.setUsername(registerUsername);
+            newUser.setName(registerName);
+            newUser.setPassword(registerPassword);
 
-        // add this stuff to registeredUsers txt file
+            users.add(newUser);
+            new TxtSerializable().serialization(users);
+            return true;
+        }
+        return false;
     }
 
 

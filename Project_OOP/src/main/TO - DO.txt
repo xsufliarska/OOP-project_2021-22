@@ -1,7 +1,25 @@
-Main - odkomentovat
-ControllerWallet - odkomentovat veci ked bude hotovy user singleton (a serializacia)
-ControllerRegister - odkomentovat a dorobit register, pridat do linked listu, ...
+kedy volať deseriable
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 ControllerStats - odkomentovat v initialize
+ControllerItemAuction - preklik doplniť
+
+choose sposob aukcie, ci chce item/chamber a aky item/chamber
+
+itemAuction - hoover fon info i want
 
 
 Authentication
@@ -31,7 +49,7 @@ Controller
 ControllerHomePage
 ControllerHomePageTopBar
 ControllerLogin                     -> Authentication (not done)
-               ControllerRegister (not sure if done)
+ControllerRegister
 
 DONE FXML
 main

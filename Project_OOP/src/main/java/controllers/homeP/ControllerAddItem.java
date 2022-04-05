@@ -34,6 +34,11 @@ public class ControllerAddItem extends ControllerHomePageTopBar implements Initi
     private Button walletButton;
 
 
+    @FXML
+    void addItemsConfirmClicked(ActionEvent event) {
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

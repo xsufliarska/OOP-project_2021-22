@@ -1,17 +1,11 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class ControllerHomePageTopBar {
 
@@ -51,7 +45,8 @@ public class ControllerHomePageTopBar {
         auctionsButton.setOnAction(actionEvent -> {
             BorderPane pane = null;
             try {
-                pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auctions.fxml"));
+                //pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auctionsItemChoose.fxml"));
+                pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auctionType.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

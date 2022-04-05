@@ -34,6 +34,8 @@ public class ControllerRegister {
     String registerPassword1;
     String registerPassword2;
 
+    boolean isRegistered = false;
+
 
     @FXML
     void goToMain(ActionEvent event) throws IOException {
@@ -57,23 +59,26 @@ public class ControllerRegister {
             info.setText("You entered wrong password. Please try again");
         }
         else if(registerPassword2.equals(registerPassword1) && registerUsername != null && registerPassword1 != null) {
-            Authentication user = new Authentication();
-            user.register(registerUsername, registerName, registerPassword1);
+            Authentication database = new Authentication();
+            isRegistered = database.register(registerUsername, registerName, registerPassword1);
 
+            if(isRegistered == true) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Successful Registration");
+                alert.setHeaderText("Your registration was successful, please log in");
+                //alert.setContentText("I have a great message for you!");
+                alert.showAndWait().ifPresent(rs -> {
+                    if (rs == ButtonType.OK) {
+                        //System.out.println("Log in");
+                    }
+                });
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Successful Registration");
-            alert.setHeaderText("Your registration was successful, please log in");
-            //alert.setContentText("I have a great message for you!");
-            alert.showAndWait().ifPresent(rs -> {
-                if (rs == ButtonType.OK) {
-                    //System.out.println("Log in");
-                }
-            });
-
-
-            BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
-            rootPane.getChildren().setAll(pane);
+                BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+                rootPane.getChildren().setAll(pane);
+            }
+            else {
+                info.setText("Username is already used");
+            }
         }
     }
 }

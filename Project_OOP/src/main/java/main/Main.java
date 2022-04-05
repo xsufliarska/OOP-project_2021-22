@@ -7,17 +7,8 @@ import javafx.stage.Stage;
 import main.model.*;
 
 import java.io.IOException;
-import java.util.LinkedList;
 
 public class Main extends Application {
-
-//-------------------------------------------------------------------
-    /*User user = null;
-    LinkedList<User> userList = null;*/
-
-    SingletonUser user = SingletonUser.getInstance();
-    // SingletonUser.setUser(new User());
-//-------------------------------------------------------------------
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -25,9 +16,22 @@ public class Main extends Application {
 
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.setTitle("ONLINE AUCTION SYSTEM");
+        stage.setTitle("BID CHAMBER");
         stage.setScene(scene);
         stage.show();
+
+
+        /*stage.setOnCloseRequest(event -> {
+            try {
+                //serialize linked list
+                new TxtSerializable().serialization(*//* sem musi ist ten linked list *//*);
+                //deserialize
+                new SerializeTXT().serializeTXT(*//* sem musi ist ten linked list *//*);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });*/
     }
 
     public static void main(String[] args) {

@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import main.Authentication;
+import main.model.SingletonUser;
+import main.model.User;
 
 import java.io.IOException;
 
@@ -45,8 +47,8 @@ public class ControllerLogin {
             info.setText("Please enter username and password");
         }
         else if(loginUsername != null && loginPassword != null) {
-            Authentication user = new Authentication();
-            rightUser = user.checkIfCorrect(loginUsername, loginPassword);
+            Authentication database = new Authentication();
+            rightUser = database.checkIfCorrect(loginUsername, loginPassword);
 
             if(rightUser == false) {
                 info.setText("Username or password is not right");
@@ -54,6 +56,9 @@ public class ControllerLogin {
             else {
                 BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homePage.fxml"));
                 rootPane.getChildren().setAll(pane);
+
+                // do not need, just use SingletonUser.getInstance().getUser();
+                User loggedInUser = SingletonUser.getInstance().getUser();
 
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

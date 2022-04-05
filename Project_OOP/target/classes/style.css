@@ -1,8 +1,10 @@
-@font-face {
+/*@font-face {
     font-family: 'Harry Potter';
     src: url('HARRYP__.TTF');
-}
-.button
+    font-size: 10px;
+}*/
+
+.main-button
 {
     -fx-background-color: #823333;          /* #ffca38, #fccf35 */
     -fx-font-family: 'Harry Potter';
@@ -14,6 +16,16 @@
     -fx-background-color: #fccf35;          /* #fdda7f, #7f0909 */
     textFill: "WHITE";
 }
+.HBox-button
+{
+    -fx-background-color: #fccf35;
+    textFill: "WHITE";
+}
+.HBox-button:hover
+{
+    -fx-background-color: #fdda7f;
+}
+
 .logOutButton
 {
     -fx-background-color: none;
@@ -26,37 +38,38 @@
     -fx-background-image: url('/pictures/gearwheelIcon.png');
     -fx-background-size: 100% 100%;
 }
-.HBox-button
+.infoButton
 {
-    -fx-background-color: #fccf35;
-    textFill: "WHITE";
-}
-.HBox-button:hover
-{
-    -fx-background-color: #fdda7f;
+    -fx-background-color: none;
+    -fx-background-image: url('/pictures/infoIcon.png');
+    -fx-background-size: 100% 100%;
+    button:hover none;
 }
 
-
-.text
-{
-    textAlignment: "CENTER";
-    -fx-font: "Times New Roman";
-    -fx-text-fill: #fccf35;
-}
 
 .borderpane
 {
     -fx-background-color: #7f0909;          /* #ffc500 */
 }
+
 /* just for home page ancherpane */
 .anchorpane
 {
     -fx-background-color: #823333;          /* #ffdb78 */
 }
 
+
+.text
+{
+    textAlignment: "CENTER";
+    /*-fx-font: "Times New Roman";*/
+    -fx-text-fill: #fccf35;
+}
 .textFieldAuto
 {
     -fx-background-color: none;
     -fx-border-color: none;
     -fx-text-fill: white;
+    -fx-font-size: 30 pt;
+    -fx-font-family: "Times New Roman";
 }

@@ -3,14 +3,24 @@ package main.model;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private String name;            //set
-    private String username;        //set
-    private String password;        //set
-    Wallet wallet;
+    private String name;
+    private String username;
+    private String password;
+    public Wallet wallet;
 
     int auctionsJoined = 0;
     int auctionsWon = 0;
     int chambersBought = 0;
+
+    public User(String username, String password, String name, String money, String attended, String won, String chambers) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        wallet = new Wallet(money);
+        this.auctionsJoined = Integer.parseInt(attended);
+        this.auctionsWon = Integer.parseInt(won);
+        this.chambersBought = Integer.parseInt(chambers);
+    }
 
 
 

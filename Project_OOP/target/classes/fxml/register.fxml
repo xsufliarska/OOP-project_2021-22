@@ -23,12 +23,12 @@
                   <Font name="Times New Roman" size="35.0" />
                </font>
             </Text>
-            <Button fx:id="registerButton" layoutX="291.0" layoutY="475.0" mnemonicParsing="false" onAction="#register" prefHeight="43.0" prefWidth="117.0" text="Register" textFill="WHITE">
+            <Button fx:id="registerButton" layoutX="291.0" layoutY="475.0" mnemonicParsing="false" onAction="#register" prefHeight="43.0" prefWidth="117.0" styleClass="main-button" text="Register" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="mainButton" layoutX="608.0" layoutY="549.0" mnemonicParsing="false" onAction="#goToMain" prefHeight="32.0" prefWidth="77.0" text="back" textAlignment="RIGHT" textFill="WHITE">
+            <Button fx:id="mainButton" layoutX="608.0" layoutY="549.0" mnemonicParsing="false" onAction="#goToMain" prefHeight="32.0" prefWidth="77.0" styleClass="main-button" text="back" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

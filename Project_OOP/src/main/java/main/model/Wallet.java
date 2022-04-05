@@ -1,7 +1,13 @@
 package main.model;
 
-public class Wallet {
-    int balance;
+import java.io.Serializable;
+
+public class Wallet implements Serializable {
+    public int balance = 0;
+
+    public Wallet(String money) {
+        this.balance = Integer.parseInt(money);
+    }
 
     public void charge(int value) {
         balance = balance + value;
