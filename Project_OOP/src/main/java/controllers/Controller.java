@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import main.SerializeTXT;
+import main.serialize.SerializeTXT;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,11 +36,11 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        /*try {
+        try {
             new SerializeTXT().deserializeTXT();
 
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 }

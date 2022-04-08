@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import main.SerializeTXT;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,8 +23,6 @@ public class ControllerHomePage extends ControllerHomePageTopBar implements Init
     private Button profileButton;
     @FXML
     private BorderPane rootPane;
-    @FXML
-    private Button settingsIcon;
     @FXML
     private Button statsButton;
     @FXML

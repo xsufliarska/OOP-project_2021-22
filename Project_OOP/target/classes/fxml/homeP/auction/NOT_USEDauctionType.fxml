@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" styleClass="borderpane" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeP.auction.NOT_USEDControllerAuctionType">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="anchorpane" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="englishAuctionButton" layoutX="74.0" layoutY="173.0" mnemonicParsing="false" onAction="#englishAuction_START" prefHeight="100.0" prefWidth="150.0" styleClass="HBox-button" text="English Auction" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="japaneseAuctionButton" layoutX="275.0" layoutY="173.0" mnemonicParsing="false" onAction="#japaneseAuction_START" prefHeight="100.0" prefWidth="150.0" styleClass="HBox-button" text="Japanese Auction" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="FPSB_AuctionButton" layoutX="475.0" layoutY="173.0" mnemonicParsing="false" onAction="#FPSB_Auction_START" prefHeight="100.0" prefWidth="150.0" styleClass="HBox-button" text="First-price sealed-bid" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="163.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hoover over the buttons for more info" textAlignment="CENTER" wrappingWidth="374.1367645263672">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="163.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose type of auction" textAlignment="CENTER" wrappingWidth="374.1367645263672">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
+            <Button fx:id="englishAuctionInfoButton" layoutX="127.0" layoutY="280.0" mnemonicParsing="false" onAction="#englishAuctionInfoButtonClicked" prefHeight="17.0" prefWidth="13.0" styleClass="infoButton">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/infoIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="japaneseAuctionInfoButton" layoutX="328.0" layoutY="280.0" mnemonicParsing="false" onAction="#japaneseAuctionInfoButtonClicked" prefHeight="17.0" prefWidth="13.0" styleClass="infoButton">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/infoIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="FPSB_AuctionInfoButton" layoutX="528.0" layoutY="280.0" mnemonicParsing="false" onAction="#FPSB_AuctionInfoButtonClicked" prefHeight="17.0" prefWidth="13.0" styleClass="infoButton">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/infoIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="145.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="buttonBar" alignment="CENTER" layoutY="119.0" prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #ffca38;">
+               <children>
+                  <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="walletButton" mnemonicParsing="false" onAction="#walletClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Wallet" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="statsButton" mnemonicParsing="false" onAction="#statsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Stats" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="auctionsButton" mnemonicParsing="false" onAction="#auctionsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Auctions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addItemButton" mnemonicParsing="false" onAction="#addItemsClicked" prefHeight="26.0" prefWidth="134.0" styleClass="HBox-button" text="Add Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Text fill="WHITE" layoutX="94.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BID CHAMBER" textAlignment="CENTER" wrappingWidth="512.5367584228516">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="94.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ITEM AUCTION" textAlignment="CENTER" wrappingWidth="512.5367584228516">
+               <font>
+                  <Font name="Times New Roman" size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="590.0" layoutY="68.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../../style.css" />
+            <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../../../style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/logoutIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

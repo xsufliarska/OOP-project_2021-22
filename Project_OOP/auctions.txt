@@ -1,0 +1,2 @@
+Signed Lord Of The Rings Series, 100, 150, janko123, src/main/resources/pictures/auctions/SLOTRS.jpg
+Signed Baseball Ball, 100, 100, janko123, src/main/resources/pictures/auctions/baseballBall.jpg

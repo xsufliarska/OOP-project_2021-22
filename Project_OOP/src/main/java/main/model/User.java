@@ -8,9 +8,9 @@ public class User implements Serializable {
     private String password;
     public Wallet wallet;
 
-    int auctionsJoined = 0;
-    int auctionsWon = 0;
-    int chambersBought = 0;
+    public int auctionsJoined = 0;
+    public int auctionsWon = 0;
+    public int chambersBought = 0;
 
     public User(String username, String password, String name, String money, String attended, String won, String chambers) {
         this.name = name;

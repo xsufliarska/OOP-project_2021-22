@@ -84,15 +84,7 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="590.0" layoutY="66.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../style.css">
-               <graphic>
-                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../pictures/gearwheelIcon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <Button layoutX="590.0" layoutY="66.0" mnemonicParsing="false" styleClass="settingsButton" stylesheets="@../../style.css" />
             <Button fx:id="logoutButton" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" onAction="#logoutClicked" styleClass="logOutButton" stylesheets="@../../style.css">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">

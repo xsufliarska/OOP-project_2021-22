@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 public class SingletonDatabase {
     private static SingletonDatabase instance;
-    //private LinkedList<User>;
+    private LinkedList<User> userList;
 
-    private SingletonDatabase() {
+    public SingletonDatabase() {
     }
 
     public static SingletonDatabase getInstance() {
@@ -14,5 +14,13 @@ public class SingletonDatabase {
             instance = new SingletonDatabase();
         }
         return instance;
+    }
+
+    public LinkedList<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(LinkedList<User> userList) {
+        this.userList = userList;
     }
 }

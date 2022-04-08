@@ -1,5 +1,11 @@
-kedy volať deseriable
 
+
+
+
+
+
+listener v controller auction nefunguje ....
+spojit/nespojiť stats s profilom :thinking:
 
 
 
@@ -7,9 +13,6 @@ kedy volať deseriable
 
 
 ------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 

@@ -10,11 +10,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import main.model.SingletonDatabase;
 import main.model.SingletonUser;
 import main.model.User;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 public class ControllerWallet extends ControllerHomePageTopBar implements Initializable {
@@ -31,8 +33,6 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
     private Button profileButton;
     @FXML
     private BorderPane rootPane;
-    @FXML
-    private Button settingsIcon;
     @FXML
     private Button statsButton;
     @FXML

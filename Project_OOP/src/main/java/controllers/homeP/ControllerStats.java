@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import main.model.SingletonUser;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,8 +27,6 @@ public class ControllerStats extends ControllerHomePageTopBar implements Initial
     private Button profileButton;
     @FXML
     private BorderPane rootPane;
-    @FXML
-    private Button settingsIcon;
     @FXML
     private Button statsButton;
     @FXML
@@ -78,8 +77,8 @@ public class ControllerStats extends ControllerHomePageTopBar implements Initial
 
 
 
-        /*auctionsAttended.setText(user.auctionsJoined);
-        auctionsWon.setText(user.auctionsWon);
-        chambersBought.setText(user.chambersBought);*/
+        auctionsAttended.setText(String.valueOf(SingletonUser.getInstance().getUser().auctionsJoined));
+        auctionsWon.setText(String.valueOf(SingletonUser.getInstance().getUser().auctionsWon));
+        chambersBought.setText(String.valueOf(SingletonUser.getInstance().getUser().chambersBought));
     }
 }

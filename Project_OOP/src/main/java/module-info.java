@@ -11,4 +11,8 @@ module project.project_oop {
     opens main.model to javafx.fxml;
     exports controllers.homeP;
     opens controllers.homeP to javafx.fxml;
+    exports controllers.homeP.auction;
+    opens controllers.homeP.auction to javafx.fxml;
+    exports main.serialize;
+    opens main.serialize to javafx.fxml;
 }

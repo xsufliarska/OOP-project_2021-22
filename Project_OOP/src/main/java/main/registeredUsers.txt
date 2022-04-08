@@ -1,7 +1,0 @@
-janko123, heslo123456, Jan Mriezka
-petko485, totoJeHeslo, Peter Dlhy
-
-
-
-/* da sa že to bude v jednom riadku -> janko123, heslo123456, Jan Mriezka
-   a citame riadok po riadku a tak, nemusime nasobky icka robit len riadok potom rozdelim podla ", " a vezmem 0, 1, 2hy prvok */

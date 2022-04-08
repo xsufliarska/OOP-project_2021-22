@@ -27,8 +27,6 @@ public class ControllerProfile extends ControllerHomePageTopBar implements Initi
     @FXML
     private BorderPane rootPane;
     @FXML
-    private Button settingsIcon;
-    @FXML
     private Button statsButton;
     @FXML
     private Button walletButton;

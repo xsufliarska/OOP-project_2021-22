@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4006018b-db62-47ad-8b71-fa7dbad80f4e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="267HuLU3FyIuFMFGILBGkuqMhBc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaMethodFindUsagesOptions.isOverridingMethods" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml/homeP/auction" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homeP\auction" />
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homeP" />
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml" />
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homePage" />
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.serialize" />
+      <recent name="main" />
+      <recent name="controllers.homeP.auction" />
+      <recent name="main.model" />
+      <recent name="controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="project.project_oop" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.serialize.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4006018b-db62-47ad-8b71-fa7dbad80f4e" name="Changes" comment="" />
+      <created>1646767929688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646767929688</updated>
+      <workItem from="1646767930945" duration="50000" />
+      <workItem from="1646768024365" duration="7644000" />
+      <workItem from="1646837859584" duration="2542000" />
+      <workItem from="1646913966225" duration="3613000" />
+      <workItem from="1647357362435" duration="3904000" />
+      <workItem from="1647442316051" duration="4209000" />
+      <workItem from="1647447194939" duration="7000" />
+      <workItem from="1647447279633" duration="1568000" />
+      <workItem from="1648123531578" duration="1252000" />
+      <workItem from="1648124832503" duration="1666000" />
+      <workItem from="1648139197270" duration="1296000" />
+      <workItem from="1648144165301" duration="1305000" />
+      <workItem from="1648159371509" duration="2981000" />
+      <workItem from="1648202031972" duration="1893000" />
+      <workItem from="1648204445902" duration="2073000" />
+      <workItem from="1648231349418" duration="1944000" />
+      <workItem from="1648233330221" duration="13882000" />
+      <workItem from="1648284552324" duration="1043000" />
+      <workItem from="1648287174068" duration="695000" />
+      <workItem from="1648290102127" duration="728000" />
+      <workItem from="1648366082156" duration="5952000" />
+      <workItem from="1648385083723" duration="2561000" />
+      <workItem from="1648650914058" duration="1083000" />
+      <workItem from="1648652549364" duration="601000" />
+      <workItem from="1648826366627" duration="19489000" />
+      <workItem from="1648913205543" duration="2092000" />
+      <workItem from="1648928924707" duration="7505000" />
+      <workItem from="1649084788734" duration="9248000" />
+      <workItem from="1649145669671" duration="14286000" />
+      <workItem from="1649197170587" duration="194000" />
+      <workItem from="1649197386187" duration="277000" />
+      <workItem from="1649198200131" duration="958000" />
+      <workItem from="1649219844990" duration="2659000" />
+      <workItem from="1649229572694" duration="150000" />
+      <workItem from="1649231159323" duration="4679000" />
+      <workItem from="1649241525119" duration="138000" />
+      <workItem from="1649245069985" duration="858000" />
+      <workItem from="1649252478278" duration="4149000" />
+      <workItem from="1649321303877" duration="873000" />
+      <workItem from="1649328547962" duration="1083000" />
+      <workItem from="1649329704235" duration="533000" />
+      <workItem from="1649330277791" duration="86000" />
+      <workItem from="1649341890661" duration="24714000" />
+      <workItem from="1649416286731" duration="4743000" />
+      <workItem from="1649446402520" duration="422000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="database" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

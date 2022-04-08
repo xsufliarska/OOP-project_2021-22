@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.model.*;
+import main.serialize.SerializeTXT;
+import main.serialize.TxtSerializable;
 
 import java.io.IOException;
 
@@ -21,17 +23,17 @@ public class Main extends Application {
         stage.show();
 
 
-        /*stage.setOnCloseRequest(event -> {
+        stage.setOnCloseRequest(windowEvent -> {
             try {
                 //serialize linked list
-                new TxtSerializable().serialization(*//* sem musi ist ten linked list *//*);
-                //deserialize
-                new SerializeTXT().serializeTXT(*//* sem musi ist ten linked list *//*);
+                new TxtSerializable().serialization(SingletonDatabase.getInstance().getUserList());
+                //serialize to txt
+                new SerializeTXT().serializeTXT(SingletonDatabase.getInstance().getUserList());
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        });*/
+        });
     }
 
     public static void main(String[] args) {

@@ -2,9 +2,9 @@ package main;
 
 import main.model.SingletonUser;
 import main.model.User;
+import main.serialize.TxtSerializable;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 
