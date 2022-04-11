@@ -5,9 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import main.serialize.SerializeTXT;
-import main.serialize.TxtSerializable;
-import main.model.SingletonDatabase;
-import main.model.SingletonUser;
+import main.model.singleton.SingletonDatabase;
+import main.model.singleton.SingletonUser;
 import main.model.User;
 
 import java.io.IOException;
@@ -65,7 +64,7 @@ public class ControllerHomePageTopBar {
         logoutButton.setOnAction(actionEvent -> {
             try {
                 //serialize linked list
-                new TxtSerializable().serialization(SingletonDatabase.getInstance().getUserList());
+                //new TxtSerializable__NOT_USED().serialization(SingletonDatabase.getInstance().getUserList());
                 //serialize to txt
                 new SerializeTXT().serializeTXT(SingletonDatabase.getInstance().getUserList());
 

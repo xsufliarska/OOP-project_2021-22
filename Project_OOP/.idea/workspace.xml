@@ -44,11 +44,11 @@
       <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.model.singleton" />
+      <recent name="main.setup_strategy" />
+      <recent name="main.model.auction" />
       <recent name="main.serialize" />
       <recent name="main" />
-      <recent name="controllers.homeP.auction" />
-      <recent name="main.model" />
-      <recent name="controllers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.project_oop" />
@@ -74,6 +74,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Project_OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.setup_strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -232,6 +245,15 @@
       <workItem from="1649341890661" duration="24714000" />
       <workItem from="1649416286731" duration="4743000" />
       <workItem from="1649446402520" duration="422000" />
+      <workItem from="1649449142579" duration="390000" />
+      <workItem from="1649450192587" duration="600000" />
+      <workItem from="1649453152407" duration="481000" />
+      <workItem from="1649520776491" duration="540000" />
+      <workItem from="1649523791313" duration="14094000" />
+      <workItem from="1649578534658" duration="18457000" />
+      <workItem from="1649614815329" duration="8140000" />
+      <workItem from="1649664428286" duration="5958000" />
+      <workItem from="1649678116484" duration="10573000" />
     </task>
     <servers />
   </component>
@@ -239,9 +261,23 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/main/serialize/ChambersSerializeTXT.java</url>
+          <line>46</line>
+          <properties class="main.serialize.ChambersSerializeTXT" method="serializeAuctions">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="database" />
+        <watch expression="lineSplit" />
       </configuration>
     </watches-manager>
   </component>

@@ -61,7 +61,7 @@
 .text
 {
     textAlignment: "CENTER";
-    -fx-font: "Times New Roman";
+    /*-fx-font: "Times New Roman";*/
     -fx-text-fill: #fccf35;
 }
 .textFieldAuto

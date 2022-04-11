@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import main.Authentication;
-import main.model.SingletonUser;
+import main.model.singleton.SingletonUser;
 import main.model.User;
 
 import java.io.IOException;

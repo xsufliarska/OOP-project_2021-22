@@ -4,9 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.model.*;
+import main.model.singleton.SingletonDatabase;
 import main.serialize.SerializeTXT;
-import main.serialize.TxtSerializable;
 
 import java.io.IOException;
 
@@ -26,7 +25,7 @@ public class Main extends Application {
         stage.setOnCloseRequest(windowEvent -> {
             try {
                 //serialize linked list
-                new TxtSerializable().serialization(SingletonDatabase.getInstance().getUserList());
+                //new TxtSerializable__NOT_USED().serialization(SingletonDatabase.getInstance().getUserList());
                 //serialize to txt
                 new SerializeTXT().serializeTXT(SingletonDatabase.getInstance().getUserList());
 

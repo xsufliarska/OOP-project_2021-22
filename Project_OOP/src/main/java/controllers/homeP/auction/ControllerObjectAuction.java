@@ -1,30 +1,25 @@
 package controllers.homeP.auction;
 
 import controllers.ControllerHomePageTopBar;
-import javafx.beans.value.*;
 import javafx.collections.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import main.Auction;
 import main.Popup;
-import main.model.AuctionedItem;
-import main.serialize.AuctionsSerializeTXT;
+import main.model.auction.AuctionedItem;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
-public class ControllerObjectAuction extends ControllerHomePageTopBar implements Initializable {
+abstract class ControllerObjectAuction extends ControllerHomePageTopBar implements Initializable {
+
+    //TODO polymorphism
+    //TODO inheritance
 
     @FXML
     private Button addItemButton;
@@ -67,27 +62,18 @@ public class ControllerObjectAuction extends ControllerHomePageTopBar implements
 
 
     @FXML
-    void joinAuctionClicked(ActionEvent event) throws IOException {
-        if(typeOfAuction.getValue() != "" && chosen != null) {
-            BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auction/auctionWindow.fxml"));
-            rootPane.getChildren().setAll(pane);
-        }
-        else if(typeOfAuction.getValue() == "") {
-            info.setAlignment(Pos.CENTER_LEFT);
-            info.setText("Choose type of auction");
-        }
-        else {
-            info.setAlignment(Pos.CENTER_LEFT);
-            info.setText("Choose auction");
-        }
+    abstract void joinAuctionClicked(ActionEvent event) throws IOException;
+
+    abstract void listViewLoad();
+
+    public void observableListLoad() {
+        typeOfAuction.setValue("");
+        typeOfAuction.setItems(auctionList);
+
+        /*typeOfAuction.setOnAction(actionEvent -> {
+            new Auction(typeOfAuction.getValue());
+        });*/
     }
-
-    public void itemsInAuction() throws FileNotFoundException {
-
-    }
-
-
-
 
     @FXML
     void auctionInfoButtonClicked(ActionEvent event) throws IOException {
@@ -127,67 +113,5 @@ public class ControllerObjectAuction extends ControllerHomePageTopBar implements
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
-        //typeOfAuction.setValue("English Auction");
-        typeOfAuction.setValue("");
-        typeOfAuction.setItems(auctionList);
-
-        typeOfAuction.setOnAction(actionEvent -> {
-            new Auction(typeOfAuction.getValue());
-            /*switch (typeOfAuction.getValue()) {
-                case "English Auction":
-                    System.out.println("English auction selected");
-                    break;
-                case "Japanese Auction":
-                    System.out.println("Japanese auction selected");
-                    break;
-                case "First-Price Sealed-Bid Auction":
-                    System.out.println("First-Price Sealed-Bid/Blind auction selected");
-                    break;
-                default:
-                    System.out.println("English auction selected");
-                    break;
-            }*/
-        });
-
-        try {
-            itemsInAuction();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        // load file
-        File file = new File("auctions.txt");
-        Scanner fr;
-
-        AuctionsSerializeTXT items = new AuctionsSerializeTXT();
-        try {
-            auctionItems = items.deserializeAuctions(auctionItems);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        listAuction.getItems().clear();
-        listAuction.setItems(auctionItems);
-
-
-        listAuction.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<AuctionedItem>() {
-            @Override
-            public void changed(ObservableValue<? extends AuctionedItem> observableValue, AuctionedItem auctionedItem, AuctionedItem t1) {
-
-                int index = 0;
-                index = listAuction.getSelectionModel().getSelectedIndex();
-                chosen = auctionItems.get(index);
-
-                try {
-                    imageItem.setImage(new Image(new FileInputStream(chosen.imagePath)));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
     }
 }

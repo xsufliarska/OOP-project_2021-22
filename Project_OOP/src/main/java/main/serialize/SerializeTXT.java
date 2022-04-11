@@ -1,6 +1,6 @@
 package main.serialize;
 
-import main.model.SingletonDatabase;
+import main.model.singleton.SingletonDatabase;
 import main.model.User;
 
 import java.io.File;
@@ -32,7 +32,7 @@ public class SerializeTXT {
 
         SingletonDatabase.getInstance().setUserList(userListTXT);
         // after creating "database" in txt i am going to serialize linked list
-        new TxtSerializable().serialization(userListTXT);
+       // new TxtSerializable__NOT_USED().serialization(userListTXT);
     }
 
     public void serializeTXT(LinkedList<User> userListTXT) throws IOException {

@@ -1,13 +1,12 @@
 package controllers.homeP;
 
 import controllers.ControllerHomePageTopBar;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import main.model.SingletonUser;
+import main.model.singleton.SingletonUser;
 
 import java.io.IOException;
 import java.net.URL;

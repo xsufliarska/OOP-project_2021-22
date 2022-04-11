@@ -1,15 +1,11 @@
 package main;
 
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class Popup {
     private Button ok = new Button("OK");
@@ -37,7 +33,7 @@ public class Popup {
         Text eAuction = new Text(10, 20,"English Auction");
         Text englishAuction = new Text(10, 40, "Auctioneer opens the auction by announcing the starting price. Place higher bids than other interested buyers on the item. Hopefully your bid will be the highest and accepted by the auctioneer.");
         Text jAuction = new Text(10, 80, "Japanese Auction");
-        Text japaneseAuction = new Text(10, 100, "An initial price is displayed. If you are interested in buying the item for this price, you will enter the auction arena. The displayed price increases. You may leave whenever you want. You can also re-enter arena. (rather not - nechce sa mi...) The last buyer remained in arena wins and auction is stopped.");
+        Text japaneseAuction = new Text(10, 100, "An initial price is displayed. If you are interested in buying the item for this price, you will enter the auction arena. The displayed price increases. You may leave whenever you want. The last buyer remained in arena wins and auction is stopped.");
         Text fAuction = new Text(10, 160, "First-Price Sealed-Bid Auction / Blind Auction");
         Text fpsbAuction = new Text(10, 180, "Offer the highest bid you are willing to pay to the auctioneer. If your bid was the highest, the item is yours.");
 

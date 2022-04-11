@@ -10,7 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
-import main.model.SingletonUser;
+import main.model.singleton.SingletonUser;
 
 public class ControllerProfile extends ControllerHomePageTopBar implements Initializable {
 

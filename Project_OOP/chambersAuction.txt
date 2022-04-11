@@ -1,0 +1,2 @@
+107, src/main/resources/pictures/auctions/chambers/5.jpg, shoes, 10, newspapers, 20, boots, 50, 0
+165, src/main/resources/pictures/auctions/chambers/3.jpg, vacuum, 50, armchair, 100, clothes, 80, Playstation games, 200, 0

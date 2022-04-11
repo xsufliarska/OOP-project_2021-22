@@ -27,8 +27,8 @@
                   <Font name="Times New Roman" size="20.0" />
                </font>
             </Text>
-            <ListView layoutX="41.0" layoutY="110.0" prefHeight="258.0" prefWidth="291.0" />
-            <ImageView fitHeight="260.0" fitWidth="311.0" layoutX="363.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+            <ListView fx:id="listAuction" layoutX="41.0" layoutY="110.0" prefHeight="258.0" prefWidth="291.0" />
+            <ImageView fx:id="imageItem" fitHeight="260.0" fitWidth="311.0" layoutX="363.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="joinAuctionButton" layoutX="283.0" layoutY="385.0" mnemonicParsing="false" onAction="#joinAuctionClicked" prefHeight="46.0" prefWidth="134.0" styleClass="HBox-button" text="Join Auction" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />

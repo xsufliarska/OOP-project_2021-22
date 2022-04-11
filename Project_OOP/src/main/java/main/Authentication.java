@@ -1,8 +1,9 @@
 package main;
 
-import main.model.SingletonUser;
+import main.model.singleton.SingletonDatabase;
+import main.model.singleton.SingletonUser;
 import main.model.User;
-import main.serialize.TxtSerializable;
+import main.serialize.SerializeTXT;
 
 import java.io.*;
 import java.util.LinkedList;
@@ -18,7 +19,8 @@ public class Authentication {
     // constructor
     public Authentication() {
         try {
-            users = new TxtSerializable().deserialization();
+//            users = new TxtSerializable__NOT_USED().deserialization();
+            users = SingletonDatabase.getInstance().getUserList();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,7 +61,8 @@ public class Authentication {
             newUser.setPassword(registerPassword);
 
             users.add(newUser);
-            new TxtSerializable().serialization(users);
+            //new TxtSerializable__NOT_USED().serialization(users);
+            new SerializeTXT().serializeTXT(users);
             return true;
         }
         return false;

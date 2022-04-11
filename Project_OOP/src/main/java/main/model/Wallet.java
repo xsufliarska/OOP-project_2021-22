@@ -2,7 +2,7 @@ package main.model;
 
 import java.io.Serializable;
 
-public class Wallet implements Serializable {
+public class Wallet {
     public int balance = 0;
 
     public Wallet(String money) {

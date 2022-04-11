@@ -4,7 +4,7 @@
 
 
 
-listener v controller auction nefunguje ....
+auction - window ako nový pop up :thinking:
 spojit/nespojiť stats s profilom :thinking:
 
 

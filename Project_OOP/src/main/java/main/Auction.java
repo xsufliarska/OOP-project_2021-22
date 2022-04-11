@@ -1,24 +1,17 @@
 package main;
 
+import main.model.auction.AuctionedItem;
+import main.model.auction.Chamber;
+import main.setup_strategy.AuctionSetup;
+
+import java.io.IOException;
+
 public class Auction {
-    //public Auction(AuctionSetup aSetup) {
-    public Auction(String type) {
-        //auctionSetup.setup(auctionedItem);        //wth is this
-        //AuctionSetup auctionSetup = aSetup;         //can i do this like this? s nazvom konstruktora odkomentovanym
-        //or like this prob
-        switch (type) {
-            case "English Auction":
-                System.out.println("English auction selected");
-                break;
-            case "Japanese Auction":
-                System.out.println("Japanese auction selected");
-                break;
-            case "First-Price Sealed-Bid Auction":
-                System.out.println("First-Price Sealed-Bid/Blind auction selected");
-                break;
-            default:
-                System.out.println("English auction selected");
-                break;
-        }
+    public Auction(AuctionedItem auctionedObject, AuctionSetup setup) throws IOException {
+        setup.setup(auctionedObject);
+    }
+
+    public Auction(Chamber auctionedObject, AuctionSetup setup) throws IOException {
+        setup.setup(auctionedObject);
     }
 }
