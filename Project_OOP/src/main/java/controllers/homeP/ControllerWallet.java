@@ -110,6 +110,7 @@ public class ControllerWallet extends ControllerHomePageTopBar implements Initia
 
         balance.setText(user.wallet.balance + " €");
 
+        //TODO listener
         amountField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {

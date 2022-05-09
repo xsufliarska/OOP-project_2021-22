@@ -13,11 +13,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,16 +40,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml/homeP/auction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/main" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\java\main" />
       <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homeP\auction" />
       <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homeP" />
       <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml" />
       <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources\fxml\homePage" />
-      <recent name="C:\Users\brani\IdeaProjects\Project_OOP\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="main.model.singleton" />
@@ -254,6 +262,26 @@
       <workItem from="1649614815329" duration="8140000" />
       <workItem from="1649664428286" duration="5958000" />
       <workItem from="1649678116484" duration="10573000" />
+      <workItem from="1649858175345" duration="557000" />
+      <workItem from="1649858754538" duration="3445000" />
+      <workItem from="1649934795683" duration="46000" />
+      <workItem from="1649938664340" duration="1341000" />
+      <workItem from="1650465023713" duration="173000" />
+      <workItem from="1650467077581" duration="29000" />
+      <workItem from="1651068152520" duration="4409000" />
+      <workItem from="1651157509073" duration="78000" />
+      <workItem from="1651307104577" duration="883000" />
+      <workItem from="1651404381991" duration="3861000" />
+      <workItem from="1651425242969" duration="3000" />
+      <workItem from="1651570439921" duration="50000" />
+      <workItem from="1651570660211" duration="156000" />
+      <workItem from="1651579664206" duration="2408000" />
+      <workItem from="1651582332036" duration="11916000" />
+      <workItem from="1651654971594" duration="5672000" />
+      <workItem from="1651675530640" duration="1382000" />
+      <workItem from="1651684813739" duration="642000" />
+      <workItem from="1652031844599" duration="28422000" />
+      <workItem from="1652099764509" duration="812000" />
     </task>
     <servers />
   </component>
@@ -263,14 +291,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/main/serialize/ChambersSerializeTXT.java</url>
-          <line>46</line>
-          <properties class="main.serialize.ChambersSerializeTXT" method="serializeAuctions">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/homeP/auction/ControllerAuction.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

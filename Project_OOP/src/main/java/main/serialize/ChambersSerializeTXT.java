@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -44,6 +46,7 @@ public class ChambersSerializeTXT {
         return auctionChambers;
     }
 
+    // dont need i think
     public void serializeAuctions(ObservableList<Chamber> auctionChambers) throws IOException {
         File file = new File("chambersAuction.txt");
         FileWriter fr = new FileWriter(file, false);            //true - append, false - overwrite
@@ -59,5 +62,28 @@ public class ChambersSerializeTXT {
         }
 
         fr.close();
+    }
+
+    public static void deletionChamber(int number) throws IOException {
+        File file = new File("chambersAuction.txt");
+        Scanner fr = new Scanner(file);
+
+        String content = new String(Files.readAllBytes(Paths.get("chambersAuction.txt")));
+        String[] contentSplit = content.split("\n");
+
+        FileWriter frw = new FileWriter(file, false);
+
+        for (int i = 0; i < contentSplit.length; i++) {
+            String[] lineSplit;
+            lineSplit = contentSplit[i].split(", ");
+            if(lineSplit[0].equals(String.valueOf(number))) {
+                // do nothing
+            }
+            else {
+                frw.write(contentSplit[i] + "\n");
+            }
+        }
+
+        frw.close();
     }
 }

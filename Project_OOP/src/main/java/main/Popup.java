@@ -58,7 +58,7 @@ public class Popup {
 
         pane.getChildren().add(ok);
 
-
+        //TODO handler
         ok.setOnAction(actionEvent -> {
             //Platform.exit();        //closes everything
             stage.close();

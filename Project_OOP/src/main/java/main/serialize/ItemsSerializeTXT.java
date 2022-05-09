@@ -9,6 +9,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ItemsSerializeTXT {
@@ -33,13 +36,36 @@ public class ItemsSerializeTXT {
 
     public void serializeAuctions(ObservableList<AuctionedItem> auctionsList) throws IOException {
         File file = new File("itemsAuction.txt");
-        FileWriter fr = new FileWriter(file, false);            //true - append, false - overwrite
+        FileWriter frw = new FileWriter(file, false);            //true - append, false - overwrite
 
         for (AuctionedItem atIndex: auctionsList) {
-            fr.write(atIndex.name + ", " + atIndex.startingPrice + ", " + atIndex.usersName + ", " +
+            frw.write(atIndex.name + ", " + atIndex.startingPrice + ", " + atIndex.usersName + ", " +
                     atIndex.imagePath + ", " + atIndex.currentBid + "\n");
         }
 
-        fr.close();
+        frw.close();
+    }
+
+    public static void deletionItem(String name) throws IOException {
+        File file = new File("itemsAuction.txt");
+        Scanner fr = new Scanner(file);
+
+        String content = new String(Files.readAllBytes(Paths.get("itemsAuction.txt")));
+        String[] contentSplit = content.split("\n");
+
+        FileWriter frw = new FileWriter(file, false);
+
+        for (int i = 0; i < contentSplit.length; i++) {
+            String[] lineSplit;
+            lineSplit = contentSplit[i].split(", ");
+            if(lineSplit[0].equals(name)) {
+                // do nothing
+            }
+            else {
+                frw.write(contentSplit[i] + "\n");
+            }
+        }
+
+        frw.close();
     }
 }

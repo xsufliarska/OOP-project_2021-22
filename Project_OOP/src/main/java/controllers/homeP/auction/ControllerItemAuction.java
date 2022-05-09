@@ -65,19 +65,25 @@ public class ControllerItemAuction extends ControllerObjectAuction implements In
 
     @FXML
     void joinAuctionClicked(ActionEvent event) throws IOException {
-        if(typeOfAuction.getValue() != "" && chosen != null) {
+        if(typeOfAuction.getValue() == "Japanese Auction") {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Please choose other type of auction");
+            alert.showAndWait().ifPresent(rs -> {
+                if (rs == ButtonType.OK) {}
+            });
+        }
+        else if(typeOfAuction.getValue() != "" && chosen != null) {
 
-//            new Auction(chosen, typeOfAuction.getValue());
             SingletonItem.getInstance().setAuctionedItem(chosen);
             SingletonItem.getInstance().setTypeOfAuction(typeOfAuction.getValue());
-
-//            BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auction/auction.fxml"));
-//            rootPane.getChildren().setAll(pane);
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/homeP/auction/auction.fxml"));
             Parent root = (Parent) loader.load();
 
             Stage stage = new Stage();
+            stage.setOnCloseRequest(windowEvent -> {
+                listViewLoad();
+            });
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -108,14 +114,14 @@ public class ControllerItemAuction extends ControllerObjectAuction implements In
 
         listAuction.getSelectionModel().selectedItemProperty().addListener((observableValue, auctionedItem, t1) -> {
 
-            int index = 0;
-            index = listAuction.getSelectionModel().getSelectedIndex();
-            chosen = auctionItems.get(index);
+            if (t1 != null) {
+                chosen = t1;
 
-            try {
-                imageItem.setImage(new Image(new FileInputStream(chosen.imagePath)));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                try {
+                    imageItem.setImage(new Image(new FileInputStream(chosen.imagePath)));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

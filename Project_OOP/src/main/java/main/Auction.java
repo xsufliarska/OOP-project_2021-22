@@ -7,6 +7,7 @@ import main.setup_strategy.AuctionSetup;
 import java.io.IOException;
 
 public class Auction {
+
     public Auction(AuctionedItem auctionedObject, AuctionSetup setup) throws IOException {
         setup.setup(auctionedObject);
     }

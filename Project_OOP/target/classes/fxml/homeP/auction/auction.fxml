@@ -25,11 +25,6 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
-            <Text fx:id="currentBid" fill="WHITE" layoutX="173.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="96.5367660522461">
-               <font>
-                  <Font name="Times New Roman" size="30.0" />
-               </font>
-            </Text>
             <Button fx:id="bidButton" alignment="CENTER" layoutX="194.0" layoutY="417.0" mnemonicParsing="false" onAction="#bid" prefHeight="40.0" prefWidth="110.0" styleClass="HBox-button" text="BID" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -48,9 +43,13 @@
             </Text>
             <Text fx:id="userName" fill="WHITE" layoutX="88.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="169.3368148803711">
                <font>
-                  <Font name="Times New Roman" size="25.0" />
+                  <Font name="Times New Roman" size="30.0" />
                </font>
             </Text>
+            <TextField fx:id="currentBidField" editable="false" layoutX="159.0" layoutY="226.0" prefHeight="52.0" prefWidth="114.0" style="-fx-background-color: none; -fx-text-fill: white;">
+               <font>
+                  <Font name="Times New Roman" size="25.0" />
+               </font></TextField>
          </children></AnchorPane>
    </center>
    <top>
