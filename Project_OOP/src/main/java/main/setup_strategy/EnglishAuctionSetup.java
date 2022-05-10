@@ -16,6 +16,9 @@ import java.util.*;
 
 public class EnglishAuctionSetup implements AuctionSetup {
 
+    //TODO polymorphism
+    //TODO inheritance
+
     private final ControllerAuction controllerAuction;
     private final PauseTransition runner = new PauseTransition(Duration.seconds(5));    //TODO bot time
     private List<Bot> botList = new ArrayList<>();
@@ -26,6 +29,8 @@ public class EnglishAuctionSetup implements AuctionSetup {
     public EnglishAuctionSetup(ControllerAuction controllerAuction) {
         this.controllerAuction = controllerAuction;
 
+        //TODO handler
+        //TODO lambda
         runner.setOnFinished(event -> {
             Random random = new Random();
             int botNum = random.nextInt(botList.size());
@@ -74,12 +79,17 @@ public class EnglishAuctionSetup implements AuctionSetup {
         Timer timer = new Timer();
 
         //TODO listener
+        //TODO handler
+        //TODO lambda
         controllerAuction.setListener(bidValue -> {
             if(ended == false) {
                 if (controllerAuction.biddingText(bidValue + "")) {
                     i += 10;
                     runner.stop();
                     runner.playFromStart();
+                }
+                else {
+
                 }
             }
             else {
@@ -135,6 +145,8 @@ public class EnglishAuctionSetup implements AuctionSetup {
         Timer timer = new Timer();
 
         //TODO listener
+        //TODO handler
+        //TODO lambda
         controllerAuction.setListener(bidValue -> {
             if(ended == false) {
                 if (controllerAuction.biddingText(bidValue + "")) {

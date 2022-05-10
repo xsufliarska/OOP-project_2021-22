@@ -25,6 +25,9 @@ import java.util.*;
 
 public class ControllerChamberAuction extends ControllerObjectAuction implements Initializable {
 
+    //TODO polymorphism
+    //TODO inheritance
+
     @FXML
     private Button addItemButton;
     @FXML
@@ -109,6 +112,8 @@ public class ControllerChamberAuction extends ControllerObjectAuction implements
         listAuction.setItems(auctionChambers);
 
 
+        //TODO handler
+        //TODO lambda
         listAuction.getSelectionModel().selectedItemProperty().addListener((observableValue, auctionedItem, t1) -> {
 
             int index = 0;

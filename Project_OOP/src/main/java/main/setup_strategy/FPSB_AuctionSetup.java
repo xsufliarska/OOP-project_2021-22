@@ -15,6 +15,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class FPSB_AuctionSetup implements AuctionSetup{
+
+    //TODO polymorphism
+    //TODO inheritance
+
     private final ControllerAuction controllerAuction;
 
     private List<Bot> botList = new ArrayList<>();
@@ -85,6 +89,7 @@ public class FPSB_AuctionSetup implements AuctionSetup{
 
         Timer timer = new Timer();
 
+        //TODO handler
         //TODO listener
         controllerAuction.setListener(bidValue -> {
             userBidValue = bidValue;

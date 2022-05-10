@@ -282,6 +282,11 @@
       <workItem from="1651684813739" duration="642000" />
       <workItem from="1652031844599" duration="28422000" />
       <workItem from="1652099764509" duration="812000" />
+      <workItem from="1652190083226" duration="91000" />
+      <workItem from="1652191147527" duration="2031000" />
+      <workItem from="1652193809269" duration="699000" />
+      <workItem from="1652204927498" duration="206000" />
+      <workItem from="1652217567822" duration="3718000" />
     </task>
     <servers />
   </component>
@@ -293,7 +298,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/homeP/auction/ControllerAuction.java</url>
-          <line>175</line>
+          <line>179</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

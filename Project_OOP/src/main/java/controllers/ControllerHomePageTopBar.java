@@ -14,6 +14,8 @@ import java.util.LinkedList;
 
 public class ControllerHomePageTopBar {
 
+    //TODO inheritance
+
     @FXML
     private Button addItemButton;
     @FXML
@@ -36,6 +38,7 @@ public class ControllerHomePageTopBar {
     LinkedList<User> userListFORNOW = SingletonDatabase.getInstance().getUserList();
 
     public void addItemsClicked() throws IOException {
+        //TODO lambda
         addItemButton.setOnAction(actionEvent -> {
             BorderPane pane = null;
             try {

@@ -1,4 +1,3 @@
 Signed Lord Of The Rings Series, 150, janko123, src/main/resources/pictures/auctions/SLOTRS.jpg, 0
 Signed Baseball Ball, 100, janko123, src/main/resources/pictures/auctions/baseballBall.jpg, 0
-Nike WMNS Air, 150, petko485, src/main/resources/pictures/auctions/NikeWMNS.jpg, 0
 Adidas NMD, 140, petko485, src/main/resources/pictures/auctions/AdidasNMD.jpg, 0

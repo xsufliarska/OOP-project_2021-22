@@ -23,6 +23,9 @@ import java.util.*;
 
 public class ControllerItemAuction extends ControllerObjectAuction implements Initializable {
 
+    //TODO polymorphism
+    //TODO inheritance
+
     @FXML
     private Button addItemButton;
     @FXML

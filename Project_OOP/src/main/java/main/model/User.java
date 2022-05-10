@@ -3,6 +3,8 @@ package main.model;
 import java.io.Serializable;
 
 public class User {
+    //TODO zapuzdrenie
+    //TODO agregacia
     private String name;
     private String username;
     private String password;

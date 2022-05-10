@@ -1,0 +1,67 @@
+DEDENIE (polymorfizmus)
+* ControllerHomePageTopBar
+* ControllerObjectAuction
+* ControllerItemAuction
+* ControllerChamberAuction
+* ControllerAuction
+* AuctionSetup (rodič)
+* EnglishAuctionSetup
+* FPSB_AuctionSetup
+
+ZAPUZDRENIE
+* User
+* Singletony
+
+Agregácia
+* User (wallet)
+* (singletony)
+
+NÁVRHOVÉ VZORY
+* Listener
+	* ControllerWallet
+	* EnglishAuctionSetup
+	* FPSB_AuctionSetup
+	* BidListener
+	* ControllerAuction
+* Factory
+	* AuctionSetup
+
+VLASTNÁ VÝNIMKA
+* ControllerAuction
+
+poskytnutie grafického používateľského rozhrania oddelene od aplikačnej logiky
+
+HANDLER
+* Popup
+* EnglishAuctionSetup
+* FPSB_AuctionSetup
+* ControllerAuction
+
+MULTITHREADING
+* EnglishAuctionSetup
+* FPSB_AuctionSetup
+
+GENERICKOSŤ
+// N O P E //
+
+RTTI
+// N O P E //
+* (singleton)?
+
+VHNIEZDENÉ TRIEDY A ROZHRANIA
+// N O P E //
+
+LAMBDA
+* EnglishAuctionSetup
+* FPSB_AuctionSetup
+
+DEFAULT METHOD IMPLEMENTATION
+// N O P E //
+
+ASPECTJ
+// N O P E //
+
+SERIALIZÁCIA 
+- classy s názvom serialize, v priečinku serialize
+
+

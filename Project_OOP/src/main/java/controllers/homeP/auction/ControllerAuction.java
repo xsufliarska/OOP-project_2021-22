@@ -60,6 +60,7 @@ public class ControllerAuction implements Initializable {
 
     @FXML
     void bid(ActionEvent event) throws IOException {
+        //TODO listener
         listener.onBid(Integer.parseInt(bidField.getText()));
     }
 
@@ -91,9 +92,15 @@ public class ControllerAuction implements Initializable {
             alert.setTitle("Not enough money");
             alert.setHeaderText("You can't bid more money than you have charged on your account.");
             alert.setContentText("Your disponible amount is " + SingletonUser.getInstance().getUser().wallet.balance + " €");
+
+            //TODO vlastná výnimka
+            bidField.setText(String.valueOf(SingletonUser.getInstance().getUser().wallet.balance));
+
             alert.showAndWait().ifPresent(rs -> {
                 if (rs == ButtonType.OK) {}
             });
+
+
 
             bid = false;
         }
@@ -156,9 +163,6 @@ public class ControllerAuction implements Initializable {
         //odstranenie zo zoznamu
         ItemsSerializeTXT.deletionItem(SingletonItem.getInstance().getAuctionedItem().name);
 
-        //TODO update scene with observable list
-//        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auction/itemAuction.fxml"));
-//        rootPane.getChildren().setAll(pane);
     }
 
     public void biddingTextFPSB(String text) {
@@ -185,9 +189,6 @@ public class ControllerAuction implements Initializable {
         //odstranenie zo zoznamu
         ItemsSerializeTXT.deletionItem(SingletonItem.getInstance().getAuctionedItem().name);
 
-        //TODO update scene with observable list
-//        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auction/itemAuction.fxml"));
-//        rootPane.getChildren().setAll(pane);
     }
 
     public void endOfAuctionChamber() throws IOException {
@@ -220,7 +221,6 @@ public class ControllerAuction implements Initializable {
 
                     income[0] = prizeValue - Integer.valueOf(currentBidField.getText().substring(0, currentBidField.getText().length() - 2));
 
-                    //TODO kolko zarobil a pop up veci s cenami
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("You won");
                     alert.setHeaderText("You successfully auctioned chamber " + SingletonChamber.getInstance().getChamber().chamberNumber +
@@ -249,9 +249,6 @@ public class ControllerAuction implements Initializable {
         //odstranenie zo zoznamu
         ChambersSerializeTXT.deletionChamber(SingletonChamber.getInstance().getChamber().chamberNumber);
 
-        //TODO update scene with observable list
-//        BorderPane pane = FXMLLoader.load(getClass().getResource("/fxml/homeP/auction/itemAuction.fxml"));
-//        rootPane.getChildren().setAll(pane);
     }
 
     @Override
@@ -330,6 +327,7 @@ public class ControllerAuction implements Initializable {
 
 
         //TODO lambda
+        //TODO handler
         leaveButton.setOnAction(actionEvent -> {
             final Stage stage = (Stage) leaveButton.getScene().getWindow();
             stage.getOnCloseRequest().handle(new WindowEvent(stage, WindowEvent.WINDOW_CLOSE_REQUEST));
