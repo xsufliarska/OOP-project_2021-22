@@ -1,6 +1,9 @@
 # OOP-project_2021-22
 Lujza Šufliarska
 
+# **BID CHAMBER**
+_E-aukcion system_
+
 # Hlavné kritériá
 ## Dedenie
 Dedenie je použité hlavne pri controlleroch v GUI, pretože sa v každom z nich nachádza rovnaké menu.
