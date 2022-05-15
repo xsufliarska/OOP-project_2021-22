@@ -17,7 +17,10 @@ Využitie agregácie je napríklad pri Userovi, ktorý má vlastnú peňaženku 
 ## Oddelenie aplikačnej logiky od používateľského rozhrania
 Projekt je rozdelený do niekoľkých packageov. Package controllers obsahuje všetky triedy spojené s GUI a jeho funkcionalitou (hlavne reakcia tlačidiel). V balíku main sú uložené všetky ostatné triedy, ktoré zabezpečujú logiku aplikácie.
 
-# Návrhové vzory
+
+
+# Ďalšie kritériá
+## Návrhové vzory
 ### Listener
 Okrem strategy je tu aplikovaný aj návrhový vzor listener. Mimo GUI je použitý v návrhovom vzore strategy, v triedach EnglishAuctionSetup a FPSB_AuctionSetup.
 
